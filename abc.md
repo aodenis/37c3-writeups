@@ -26,7 +26,7 @@ In order to recover the flag, we have to find a way to compute $Q_{ac}$. The onl
 ## Invalid Curve Attack
 After searching a bit, there is a well-known attack for such cases, the Invalid Curve Attack.
 
-Elliptic curve addition operation does not use the value of b from curve equation $y^2 = x^3 + a*x + b$. The multiplication $Q_{ab} = d_a * Q_b$ is therefore performed on the curve $Q_b$ is on. We can therefore select a value for b for which the curve $y^2 = x^3 + a*x + b$ will be easy perform an ECDLP on and pass a point from this curve to as $Q_b$.
+Elliptic curve addition operation does not use the value of $b$ from curve equation $y^2 = x^3 + a * x + b$. The multiplication $Q_{ab} = d_a * Q_b$ is therefore performed on the curve $Q_b$ is on. We can therefore select a value for $b$ for which the curve $y^2 = x^3 + a * x + b$ will be easy perform an ECDLP on and pass a point from this curve to as $Q_b$.
 
 The curve we are looking for must have an order that can be decomposed as much as possible.
 This sagemath code performs this computation:
